@@ -1,0 +1,38 @@
+
+name: Daglig jobbsokning
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  search-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hamta projektet
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Starta Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Kor jobbsokningen
+        run: python job_agent.py
+
+      - name: Spara sokresultaten
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add matches.json
+          git diff --cached --quiet || (
+            git commit -m "Uppdatera jobbresultat"
+            git push
+          )
