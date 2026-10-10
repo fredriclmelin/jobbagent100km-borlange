@@ -1,0 +1,55 @@
+
+{
+  "agent_name": "Jobbagent Borlange",
+  "location": {
+    "city": "Borlänge",
+    "country": "Sweden",
+    "latitude": 60.4858,
+    "longitude": 15.4371,
+    "radius_km": 100
+  },
+  "schedule": {
+    "frequency": "daily",
+    "report_email": "fredric.l.melin@gmail.com"
+  },
+  "job_titles": [
+    "Underhållschef",
+    "Maintenance Manager",
+    "Reliability Manager",
+    "Asset Reliability Manager",
+    "Teknisk chef",
+    "Technical Manager",
+    "Engineering Manager",
+    "Automationschef",
+    "Produktionschef",
+    "Fabrikschef",
+    "Industrial Improvement Manager",
+    "Underhållsledare",
+    "Maintenance and Engineering Manager"
+  ],
+  "skill_keywords": [
+    "underhåll",
+    "driftsäkerhet",
+    "reliability",
+    "automation",
+    "PLC",
+    "OT",
+    "industriell IT",
+    "förbättringsarbete",
+    "personalansvar",
+    "budgetansvar",
+    "produktion",
+    "tekniskt ledarskap",
+    "tillgångsförvaltning",
+    "asset management"
+  ],
+  "scoring_weights": {
+    "job_content": 30,
+    "leadership": 20,
+    "maintenance_reliability": 20,
+    "automation_industrial_technology": 15,
+    "improvement_economics_results": 15
+  },
+  "minimum_match_score": 40,
+  "exclude_duplicates": true
+}
